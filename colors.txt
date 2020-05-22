@@ -1,0 +1,3 @@
+recovered ==> #2DBD02 
+current cases==> #D49C08
+death ==> #CC4239
