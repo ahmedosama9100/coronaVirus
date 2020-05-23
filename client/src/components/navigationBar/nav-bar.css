@@ -6,11 +6,11 @@ button {
 
 .navigation-bar {
   background-color: #8c96a1;
-  width: 100vw;
-  height: 4vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
+  height: 4vh;
 }
 
 .navigation-bar .covid19-icon {

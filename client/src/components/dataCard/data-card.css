@@ -1,0 +1,23 @@
+.card {
+  text-align: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.card .total-numbers {
+  margin-top: 20px;
+}
+
+.card .new-cases {
+  margin-top: 20px;
+  font-size: 1.3rem;
+}
+
+.card .color-bar {
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background-color: blue;
+  bottom: 0;
+}
