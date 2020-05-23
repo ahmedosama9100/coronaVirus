@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import DataCard from "./../dataCard/DataCard";
 import "./first-section.css";
 
 function FirstSection(props) {
-
   return (
     <div className="card-container">
       <DataCard

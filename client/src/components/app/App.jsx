@@ -25,6 +25,7 @@ function App() {
     .then(res => res.json())
     .then(data => {
       if (searchData === "") {
+        document.title = "Covid-19 | Global";
         setCases(data.Global);
       } else {
         let countries = data.Countries;
