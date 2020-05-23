@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import _ from "lodash";
 import NavBar from "./../navigationBar/NavBar";
 import FirstSection from "./../firstSection/FirstSection";
 import Chart from "./../chart/Chart";
@@ -14,16 +15,29 @@ function App() {
     TotalDeaths: 0,
     TotalRecovered: 0
   };
-
   const [cases, setCases] = useState(numbers);
+  const [searchData, setSearchData] = useState("");
+
+  function getSearchValue(searchValue) {
+    setSearchData(_.kebabCase(searchValue));
+  }
   fetch("https://api.covid19api.com/summary")
     .then(res => res.json())
     .then(data => {
-      setCases(data.Global);
+      if (searchData === "") {
+        setCases(data.Global);
+      } else {
+        let countries = data.Countries;
+        countries.forEach(country => {
+          if (country.Slug === searchData) {
+            setCases(country);
+          }
+        });
+      }
     });
   return (
     <React.Fragment>
-      <NavBar />
+      <NavBar getSearchValue={getSearchValue} />
       <FirstSection cases={cases} />
       <Chart cases={cases} />
       <Footer />

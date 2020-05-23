@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import "./nav-bar.css";
 
-function NavBar() {
-  function showSearch() {}
+function NavBar(props) {
+  const [searchValue, setSearchValue] = useState("");
+
+  function handleSubmit(e) {
+    props.getSearchValue(searchValue);
+    e.preventDefault();
+  }
+
+  function updateValue(e) {
+    setSearchValue(e.target.value);
+  }
+
   return (
     <div className="navigation-bar">
       <img
@@ -11,7 +21,7 @@ function NavBar() {
         alt="covid 19 virus icon"
         className="covid19-icon"
       />
-      <form method="get" >
+      <form method="get" onSubmit={handleSubmit}>
         <div className="search-bar">
           <button type="submit" className="fas fa-search search-icon"></button>
           <input
@@ -19,6 +29,8 @@ function NavBar() {
             name="searchField"
             className="search-field"
             placeholder="Country"
+            value={searchValue}
+            onChange={updateValue}
           />
         </div>
       </form>
