@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./../navigationBar/NavBar";
 import FirstSection from "./../firstSection/FirstSection";
 import Chart from "./../chart/Chart";
+import Footer from "./../footer/Footer";
 import "./initial-style.css";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <React.Fragment>
       <NavBar />
       <FirstSection />
-      <Chart id="myChart" />
+      <Chart />
+      <Footer />
     </React.Fragment>
   );
 }
