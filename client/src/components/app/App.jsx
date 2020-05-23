@@ -30,6 +30,7 @@ function App() {
         let countries = data.Countries;
         countries.forEach(country => {
           if (country.Slug === searchData) {
+            document.title = "Covid-19 | " + searchData;
             setCases(country);
           }
         });

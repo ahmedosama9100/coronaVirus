@@ -31,6 +31,8 @@ function NavBar(props) {
             placeholder="Country"
             value={searchValue}
             onChange={updateValue}
+            autoComplete="off"
+            spellCheck="false"
           />
         </div>
       </form>
