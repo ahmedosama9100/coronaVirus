@@ -14,7 +14,20 @@
         position: absolute;
         height: 7px;
         width: 100%;
-        background-color: blue;
+        background-color: #d49c08;
         bottom: 0;
+    }
+
+    .total-cases {
+        @extend .color-bar;
+        background-color: #d49c08;
+    }
+    .recovered {
+        @extend .color-bar;
+        background-color: #2dbd02;
+    }
+    .total-death {
+        @extend .color-bar;
+        background-color: #cc4239;
     }
 }

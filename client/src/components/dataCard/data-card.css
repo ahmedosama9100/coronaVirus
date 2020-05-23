@@ -14,10 +14,22 @@
   font-size: 1.3rem;
 }
 
-.card .color-bar {
+.card .color-bar, .card .total-cases, .card .recovered, .card .total-death {
   position: absolute;
   height: 7px;
   width: 100%;
-  background-color: blue;
+  background-color: #d49c08;
   bottom: 0;
+}
+
+.card .total-cases {
+  background-color: #d49c08;
+}
+
+.card .recovered {
+  background-color: #2dbd02;
+}
+
+.card .total-death {
+  background-color: #cc4239;
 }

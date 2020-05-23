@@ -1,13 +1,13 @@
 import React from "react";
 import NavBar from "./../navigationBar/NavBar";
-import DataCard from "./../dataCard/DataCard";
+import FirstSection from "./../firstSection/FirstSection";
 import "./initial-style.css";
 
 function App() {
   return (
     <React.Fragment>
       <NavBar />
-      <DataCard />
+      <FirstSection />
     </React.Fragment>
   );
 }
