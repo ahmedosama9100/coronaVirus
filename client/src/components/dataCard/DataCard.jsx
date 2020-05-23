@@ -1,12 +1,14 @@
 import React from "react";
 import "./data-card.css";
 
-function DataCard() {
+function DataCard(props) {
   return (
     <div className="card">
-      <h1 className="total-numbers">19k</h1>
-      <p className="new-cases">last update</p>
-      <div className="color-bar"></div>
+      <h1>{props.type}</h1>
+      <h1 className="total-numbers">{props.totalNumber.toLocaleString()}</h1>
+      <p className="new-cases">New Cases</p>
+      <p className="new-cases">{props.newCases.toLocaleString()}</p>
+      <div className={props.type}></div>
     </div>
   );
 }
