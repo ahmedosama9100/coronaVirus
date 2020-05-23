@@ -1,3 +1,7 @@
 recovered ==> #2DBD02 
 current cases==> #D49C08
 death ==> #CC4239
+
+navigation bar ==> #8C96A1
+first section ==> #E6EAED
+last section (chart section) ==> #191919

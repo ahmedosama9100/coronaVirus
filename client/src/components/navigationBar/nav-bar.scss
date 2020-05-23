@@ -1,0 +1,42 @@
+button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+.navigation-bar {
+    background-color: #8c96a1;
+    width: 100vw;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .covid19-icon {
+        margin-left: 20px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .search-bar {
+        background-color: white;
+        width: 500px;
+        border-radius: 20px;
+        padding-left: 5px;
+        margin-right: 10px;
+
+        .search-icon {
+            &:hover {
+                color: #8c96a1;
+            }
+        }
+        .search-field {
+            border: none;
+            outline: none;
+            width: 95%;
+            height: 25px;
+            padding-left: 5px;
+            &:focus {
+                box-shadow: 0 2px 0 0 #4d90fe;
+            }
+        }
+    }
+}

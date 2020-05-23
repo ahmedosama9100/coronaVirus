@@ -1,7 +1,13 @@
 import React from "react";
+import NavBar from "./../navigationBar/NavBar";
+import "./initial-style.css"
 
 function App() {
-  return <h1>Hello world</h1>;
+  return (
+    <React.Fragment>
+      <NavBar />
+    </React.Fragment>
+  );
 }
 
 export default App;
